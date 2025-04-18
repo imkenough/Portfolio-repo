@@ -21,40 +21,6 @@ A modern, responsive portfolio and blog website built with Next.js 14, featuring
 - **Deployment:** Netlify
 - **Content Management:** Local Markdown files
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+ or Bun runtime
-- Git
-
-### Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/imkenough/Portfolio-repo.git
-cd Portfolio-repo
-```
-
-2. Install dependencies:
-
-```bash
-npm install
-# or
-bun install
-```
-
-3. Start the development server:
-
-```bash
-npm run dev
-# or
-bun dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
-
 ## Project Structure
 
 ```
@@ -75,7 +41,7 @@ bun dev
 - `npm run lint` - Run ESLint
 - `npm run format` - Format code with Prettier
 
-## Deployment
+<!-- ## Deployment
 
 This project is configured for deployment on Netlify. The `netlify.toml` file contains the necessary build configurations.
 
@@ -94,4 +60,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 Kenny - [GitHub](https://github.com/imkenough)
 
-Project Link: [https://github.com/imkenough/Portfolio-repo](https://github.com/imkenough/Portfolio-repo)
+Project Link: [https://github.com/imkenough/Portfolio-repo](https://github.com/imkenough/Portfolio-repo) -->
