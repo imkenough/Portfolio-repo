@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Blog
+
+A modern, responsive portfolio and blog website built with Next.js 14, featuring a clean design, dark mode support, and integrated blog functionality.
+
+## Features
+
+- 🎨 Modern and clean design
+- 🌓 Dark mode support
+- 📱 Fully responsive layout
+- 📝 Blog section with dynamic content
+- 🚀 Fast page loads with Next.js 14 App Router
+- 💅 Styled with Tailwind CSS and Shadcn/ui
+- 🔍 SEO optimized
+
+## Tech Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Styling:** Tailwind CSS, Shadcn/ui
+- **Language:** TypeScript
+- **Package Manager:** npm/bun
+- **Deployment:** Netlify
+- **Content Management:** Local Markdown files
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+ or Bun runtime
+- Git
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/imkenough/Portfolio-repo.git
+cd Portfolio-repo
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+bun install
+```
+
+3. Start the development server:
 
 ```bash
 npm run dev
 # or
-yarn dev
-# or
-pnpm dev
-# or
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── public/          # Static files
+├── src/
+│   ├── app/        # App router pages
+│   ├── components/ # React components
+│   └── lib/        # Utility functions
+├── styles/         # Global styles
+└── content/        # Blog posts and content
+```
 
-## Learn More
+## Development
 
-To learn more about Next.js, take a look at the following resources:
+- `npm run dev` - Start development server
+- `npm run build` - Build production bundle
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run format` - Format code with Prettier
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is configured for deployment on Netlify. The `netlify.toml` file contains the necessary build configurations.
 
-## Deploy on Vercel
+To deploy your own instance:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Fork this repository
+2. Create a new site on Netlify
+3. Connect your forked repository
+4. Deploy!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Contact
+
+Kenny - [GitHub](https://github.com/imkenough)
+
+Project Link: [https://github.com/imkenough/Portfolio-repo](https://github.com/imkenough/Portfolio-repo)
