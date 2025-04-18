@@ -1,0 +1,18 @@
+[images]
+  remote_images = ["https://github.com/*/*/", "https://avatars.githubusercontent.com/*"]
+
+[build]
+  command = "bun run build"
+  publish = ".next"
+
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  NEXT_USE_NETLIFY_EDGE = "true"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
