@@ -99,9 +99,10 @@ export default async function Home() {
               Hi, I'm <span className="text-primary">Haneesh Kenny</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-[42rem] px-4 md:px-0">
-              Full-stack developer focused on building modern web applications,
-              Machine Learning Projects and sharing knowledge through{" "}
-              <i>wannabe</i> blogging.
+              I'm a college student aspiring to become a Full-Stack Developer,
+              with a focus on building modern web applications and exploring
+              Machine Learning projects. I also enjoy sharing what I learn
+              through <i>wannabe</i> blogging.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
               <Button asChild size="lg" className="w-full sm:w-auto">
