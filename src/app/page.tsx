@@ -92,24 +92,29 @@ export default async function Home() {
   return (
     <div className="flex flex-col min-h-[calc(100vh-64px)]">
       {/* Hero Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-b from-background to-muted">
-        <div className="container">
-          <div className="flex flex-col items-center text-center space-y-8">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+      <section className="py-12 md:py-20 lg:py-28 bg-gradient-to-b from-background to-muted">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center text-center space-y-6 md:space-y-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
               Hi, I'm <span className="text-primary">Haneesh Kenny</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-[42rem]">
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-[42rem] px-4 md:px-0">
               Full-stack developer focused on building modern web applications,
               Machine Learning Projects and sharing knowledge through{" "}
               <i>wannabe</i> blogging.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+              <Button asChild size="lg" className="w-full sm:w-auto">
                 <Link href="/projects">
                   View Projects <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="w-full sm:w-auto"
+              >
                 <Link href="/blog">Read My Blog</Link>
               </Button>
             </div>
@@ -118,18 +123,18 @@ export default async function Home() {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="py-20 bg-background">
-        <div className="container">
-          <div className="flex flex-col items-center space-y-4 text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight">
+      <section className="py-12 md:py-20 bg-background">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center space-y-4 text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
               Featured Projects
             </h2>
-            <p className="text-muted-foreground max-w-[42rem]">
+            <p className="text-muted-foreground max-w-[42rem] px-4 md:px-0">
               A selection of my recent projects, showcasing my skills and
               interests.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {repos.map((project) => {
               // Format topics to be more readable
               const formattedTopics = project.topics.map((topic) =>
@@ -139,17 +144,19 @@ export default async function Home() {
               return (
                 <Card key={project.id} className="flex flex-col h-full">
                   <CardHeader>
-                    <CardTitle className="flex items-start justify-between">
-                      <span>
+                    <CardTitle className="flex items-start justify-between gap-2">
+                      <span className="break-words">
                         {project.name.replaceAll("-", " ").replaceAll("_", " ")}
                       </span>
                       {project.language && (
-                        <span className="text-xs px-2 py-1 rounded-full bg-secondary">
+                        <span className="text-xs px-2 py-1 rounded-full bg-secondary whitespace-nowrap">
                           {project.language}
                         </span>
                       )}
                     </CardTitle>
-                    <CardDescription>{project.description}</CardDescription>
+                    <CardDescription className="line-clamp-2">
+                      {project.description}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent className="flex-grow">
                     {formattedTopics.length > 0 && (
@@ -157,13 +164,13 @@ export default async function Home() {
                         {formattedTopics.slice(0, 4).map((tag) => (
                           <span
                             key={tag}
-                            className="px-2 py-1 bg-secondary text-secondary-foreground rounded-md text-xs"
+                            className="px-2 py-1 bg-secondary text-secondary-foreground rounded-md text-xs whitespace-nowrap"
                           >
                             {tag}
                           </span>
                         ))}
                         {formattedTopics.length > 4 && (
-                          <span className="px-2 py-1 bg-secondary text-secondary-foreground rounded-md text-xs">
+                          <span className="px-2 py-1 bg-secondary text-secondary-foreground rounded-md text-xs whitespace-nowrap">
                             +{formattedTopics.length - 4} more
                           </span>
                         )}
@@ -184,8 +191,13 @@ export default async function Home() {
                       </div>
                     </div>
                   </CardContent>
-                  <CardFooter className="flex gap-2">
-                    <Button asChild variant="default" size="sm">
+                  <CardFooter className="flex gap-2 flex-wrap">
+                    <Button
+                      asChild
+                      variant="default"
+                      size="sm"
+                      className="flex-1 sm:flex-none"
+                    >
                       <Link
                         href={project.html_url}
                         target="_blank"
@@ -195,7 +207,12 @@ export default async function Home() {
                       </Link>
                     </Button>
                     {project.homepage && (
-                      <Button asChild variant="outline" size="sm">
+                      <Button
+                        asChild
+                        variant="outline"
+                        size="sm"
+                        className="flex-1 sm:flex-none"
+                      >
                         <Link
                           href={project.homepage}
                           target="_blank"
@@ -210,8 +227,8 @@ export default async function Home() {
               );
             })}
           </div>
-          <div className="flex justify-center mt-12">
-            <Button asChild variant="outline">
+          <div className="flex justify-center mt-8 md:mt-12">
+            <Button asChild variant="outline" className="w-full sm:w-auto">
               <Link href="/projects">
                 View All Projects <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -221,31 +238,33 @@ export default async function Home() {
       </section>
 
       {/* Skills Section */}
-      <section className="py-20 bg-muted/50">
-        <div className="container">
-          <div className="flex flex-col items-center space-y-4 text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight">
+      <section className="py-12 md:py-20 bg-muted/50">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center space-y-4 text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
               Skills & Experience
             </h2>
-            <p className="text-muted-foreground max-w-[42rem]">
+            <p className="text-muted-foreground max-w-[42rem] px-4 md:px-0">
               The technologies and tools I specialize in for building modern web
               and machine learning applications
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {skills.map((skill) => (
               <Card key={skill.title} className="h-full">
                 <CardHeader className="text-center">
                   <div className="flex justify-center">{skill.icon}</div>
-                  <CardTitle>{skill.title}</CardTitle>
-                  <CardDescription>{skill.description}</CardDescription>
+                  <CardTitle className="mt-2">{skill.title}</CardTitle>
+                  <CardDescription className="line-clamp-2">
+                    {skill.description}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
                     {skill.items.map((item) => (
                       <li key={item} className="flex items-center">
-                        <div className="h-1.5 w-1.5 rounded-full bg-primary mr-2" />
-                        {item}
+                        <div className="h-1.5 w-1.5 rounded-full bg-primary mr-2 flex-shrink-0" />
+                        <span className="text-sm">{item}</span>
                       </li>
                     ))}
                   </ul>

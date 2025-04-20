@@ -71,22 +71,25 @@ export default function Header() {
           <ModeToggle />
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon">
+              <Button variant="outline" size="icon" className="ml-2">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <nav className="flex flex-col gap-4 mt-8">
+            <SheetContent
+              side="right"
+              className="w-[85vw] sm:w-[400px] p-8 bg-background/80 backdrop-blur-lg border-l border-border/50"
+            >
+              <nav className="flex flex-col gap-8 mt-12">
                 {routes.map((route) => (
                   <Link
                     key={route.href}
                     href={route.href}
-                    className={`text-lg font-medium ${
+                    className={`text-lg sm:text-xl font-medium transition-colors ${
                       pathname === route.href
                         ? "text-primary"
                         : "text-muted-foreground"
-                    } hover:text-primary`}
+                    } hover:text-primary hover:translate-x-1 duration-200`}
                     onClick={() => setOpen(false)}
                   >
                     {route.label}

@@ -29,8 +29,125 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="col-span-2 space-y-6">
+        <div className="flex flex-col md:grid md:grid-cols-3 gap-8 mb-12">
+          <div className="w-full md:w-auto order-1 md:order-2 space-y-6">
+            <Card className="w-full">
+              <CardContent className="p-6">
+                <div className="flex justify-center mb-6">
+                  <div className="relative w-32 h-32 rounded-full overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-primary-foreground text-4xl font-bold">
+                      HK
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex justify-center space-x-4 mb-6">
+                  <Button asChild size="icon" variant="ghost">
+                    <Link
+                      href="https://github.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <RiGithubLine className="h-6 w-6" />
+                      <span className="sr-only">GitHub</span>
+                    </Link>
+                  </Button>
+                  <Button asChild size="icon" variant="ghost">
+                    <Link
+                      href="https://bsky.app/profile/imkenough9818.bsky.social"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <RiBlueskyLine className="h-6 w-6" />
+                      <span className="sr-only">BlueSky</span>
+                    </Link>
+                  </Button>
+                  <Button asChild size="icon" variant="ghost">
+                    <Link href="mailto:khaneesh50@gmail.com">
+                      <RiMailAddLine className="h-6 w-6" />
+                      <span className="sr-only">Email</span>
+                    </Link>
+                  </Button>
+                </div>
+
+                <Button asChild className="w-full">
+                  <Link href="kenny_resume.pdf" download>
+                    <Download className="mr-2 h-4 w-4" /> Download Resume
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <div className="space-y-4 w-full">
+              <h3 className="font-semibold text-center md:text-left">
+                My Skills
+              </h3>
+              <div className="space-y-2">
+                <div>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span>HTML/CSS</span>
+                    <span>95%</span>
+                  </div>
+                  <div className="h-2 bg-secondary rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-primary rounded-full"
+                      style={{ width: "95%" }}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span>JavaScript/TypeScript</span>
+                    <span>75%</span>
+                  </div>
+                  <div className="h-2 bg-secondary rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-primary rounded-full"
+                      style={{ width: "75%" }}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span>React/Next.js</span>
+                    <span>70%</span>
+                  </div>
+                  <div className="h-2 bg-secondary rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-primary rounded-full"
+                      style={{ width: "70%" }}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span>Node.js</span>
+                    <span>85%</span>
+                  </div>
+                  <div className="h-2 bg-secondary rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-primary rounded-full"
+                      style={{ width: "85%" }}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span>Machine Learning</span>
+                    <span>75%</span>
+                  </div>
+                  <div className="h-2 bg-secondary rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-primary rounded-full"
+                      style={{ width: "75%" }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-full md:col-span-2 order-2 md:order-1 space-y-6">
             <section>
               <h2 className="text-2xl font-bold tracking-tight mb-4">
                 Hello, I'm Haneesh Kenny
@@ -128,121 +245,6 @@ export default function AboutPage() {
                 </div> */}
               </div>
             </section>
-          </div>
-
-          <div className="space-y-6">
-            <Card>
-              <CardContent className="p-6">
-                <div className="flex justify-center mb-6">
-                  <div className="relative w-32 h-32 rounded-full overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-primary-foreground text-4xl font-bold">
-                      HK
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex justify-center space-x-4 mb-6">
-                  <Button asChild size="icon" variant="ghost">
-                    <Link
-                      href="https://github.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <RiGithubLine className="h-6 w-6" />
-                      <span className="sr-only">GitHub</span>
-                    </Link>
-                  </Button>
-                  <Button asChild size="icon" variant="ghost">
-                    <Link
-                      href="https://bsky.app/profile/imkenough9818.bsky.social"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <RiBlueskyLine className="h-6 w-6" />
-                      <span className="sr-only">BlueSky</span>
-                    </Link>
-                  </Button>
-                  <Button asChild size="icon" variant="ghost">
-                    <Link href="mailto:khaneesh50@gmail.com">
-                      <RiMailAddLine className="h-6 w-6" />
-                      <span className="sr-only">Email</span>
-                    </Link>
-                  </Button>
-                </div>
-
-                <Button asChild className="w-full">
-                  <Link href="kenny_resume.pdf" download>
-                    <Download className="mr-2 h-4 w-4" /> Download Resume
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <div className="space-y-4">
-              <h3 className="font-semibold">My Skills</h3>
-              <div className="space-y-2">
-                <div>
-                  <div className="flex justify-between text-sm mb-1">
-                    <span>HTML/CSS</span>
-                    <span>95%</span>
-                  </div>
-                  <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-primary rounded-full"
-                      style={{ width: "95%" }}
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between text-sm mb-1">
-                    <span>JavaScript/TypeScript</span>
-                    <span>75%</span>
-                  </div>
-                  <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-primary rounded-full"
-                      style={{ width: "75%" }}
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between text-sm mb-1">
-                    <span>React/Next.js</span>
-                    <span>70%</span>
-                  </div>
-                  <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-primary rounded-full"
-                      style={{ width: "70%" }}
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between text-sm mb-1">
-                    <span>Node.js</span>
-                    <span>85%</span>
-                  </div>
-                  <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-primary rounded-full"
-                      style={{ width: "85%" }}
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between text-sm mb-1">
-                    <span>Machine Learning</span>
-                    <span>75%</span>
-                  </div>
-                  <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-primary rounded-full"
-                      style={{ width: "75%" }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 

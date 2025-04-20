@@ -108,12 +108,27 @@ export default async function ProjectsPage() {
 
       <Tabs defaultValue="all" className="w-full mb-8">
         <div className="flex justify-center mb-8">
-          <TabsList>
-            <TabsTrigger value="all">All Projects</TabsTrigger>
-            <TabsTrigger value="web">Web Applications</TabsTrigger>
-            <TabsTrigger value="backend">Backend Projects</TabsTrigger>
-            <TabsTrigger value="ml">ML Projects</TabsTrigger>
-            <TabsTrigger value="other">Other Projects</TabsTrigger>
+          <TabsList className="flex flex-wrap justify-center gap-2">
+            <TabsTrigger value="all" className="text-xs sm:text-sm">
+              <span className="hidden sm:inline">All Projects</span>
+              <span className="sm:hidden">All</span>
+            </TabsTrigger>
+            <TabsTrigger value="web" className="text-xs sm:text-sm">
+              <span className="hidden sm:inline">Web Applications</span>
+              <span className="sm:hidden">Web</span>
+            </TabsTrigger>
+            <TabsTrigger value="backend" className="text-xs sm:text-sm">
+              <span className="hidden sm:inline">Backend Projects</span>
+              <span className="sm:hidden">Backend</span>
+            </TabsTrigger>
+            <TabsTrigger value="ml" className="text-xs sm:text-sm">
+              <span className="hidden sm:inline">ML Projects</span>
+              <span className="sm:hidden">ML</span>
+            </TabsTrigger>
+            <TabsTrigger value="other" className="text-xs sm:text-sm">
+              <span className="hidden sm:inline">Other Projects</span>
+              <span className="sm:hidden">Other</span>
+            </TabsTrigger>
           </TabsList>
         </div>
 
