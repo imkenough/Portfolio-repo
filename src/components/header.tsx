@@ -48,21 +48,22 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex md:gap-2">
-          <NavigationMenu>
-            <NavigationMenuList>
-              {routes.map((route) => (
-                <NavigationMenuItem key={route.href}>
-                  <Link
-                    href={route.href}
-                    className={navigationMenuTriggerStyle()}
-                  >
-                    {route.label}
-                  </Link>
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
+        <div className="hidden md:flex md:gap-6">
+          <nav className="flex items-center gap-6">
+            {routes.map((route) => (
+              <Link
+                key={route.href}
+                href={route.href}
+                className={`text-sm font-medium transition-colors ${
+                  pathname === route.href
+                    ? "text-primary"
+                    : "text-muted-foreground"
+                } hover:text-primary hover:brightness-125`}
+              >
+                {route.label}
+              </Link>
+            ))}
+          </nav>
           <ModeToggle />
         </div>
 

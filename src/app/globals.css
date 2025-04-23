@@ -69,16 +69,6 @@
   }
 }
 
-@layer utilities {
-  .gradient-bg {
-    background: linear-gradient(
-      to bottom right,
-      hsl(var(--background)),
-      hsl(var(--muted))
-    );
-  }
-}
-
 @layer components {
   .animate-fade-in {
     animation: fadeIn 0.5s ease-in-out;
