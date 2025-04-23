@@ -13,7 +13,7 @@ import { RiBlueskyLine, RiGithubLine, RiMailAddLine } from "react-icons/ri";
 import { Separator } from "@/components/ui/separator";
 
 export const metadata: Metadata = {
-  title: "About | Portfolio & Blog",
+  title: "imkenough | About",
   description: "Learn more about me, my background, and my skills",
 };
 

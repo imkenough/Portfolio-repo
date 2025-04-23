@@ -14,7 +14,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getEnhancedRepositories, type Repository } from "@/lib/github";
 
 export const metadata: Metadata = {
-  title: "Projects | Portfolio & Blog",
+  title: "imkenough | Projects",
   description: "Explore my GitHub projects and other work",
 };
 

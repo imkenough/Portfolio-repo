@@ -9,6 +9,10 @@ import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import { getBlogPostBySlug, getBlogPosts, type BlogPost } from "@/lib/notion";
 
+// Add dynamic configuration
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 type Props = {
   params: {
     slug: string;
@@ -29,13 +33,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${post.title} | Blog`,
     description: post.excerpt,
   };
-}
-
-export async function generateStaticParams() {
-  const posts = await getBlogPosts();
-  return posts.map((post: BlogPost) => ({
-    slug: post.slug,
-  }));
 }
 
 export default async function BlogPostPage({ params }: Props) {

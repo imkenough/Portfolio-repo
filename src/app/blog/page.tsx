@@ -12,8 +12,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Clock, Tag } from "lucide-react";
 import { getBlogPosts } from "@/lib/notion";
 
+// Add dynamic configuration
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export const metadata: Metadata = {
-  title: "Blog | Portfolio & Blog",
+  title: "imkenough | Blog",
   description:
     "Read my latest blog posts about web development, programming, and technology",
 };
