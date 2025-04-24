@@ -22,8 +22,8 @@ export default function AboutPage() {
     <div className="container py-12">
       <div className="max-w-3xl mx-auto">
         <div className="flex flex-col items-center text-center mb-12">
-          <h1 className="text-4xl font-bold tracking-tight mb-4">About Me</h1>
-          <p className="text-xl text-muted-foreground">
+          <h1 className="mb-4">About Me</h1>
+          <p className="muted-text">
             Full-stack developer passionate about building modern web
             applications and sharing knowledge.
           </p>
@@ -35,7 +35,7 @@ export default function AboutPage() {
               <CardContent className="p-6">
                 <div className="flex justify-center mb-6">
                   <div className="relative w-32 h-32 rounded-full overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-primary-foreground text-4xl font-bold">
+                    <div className="absolute inset-0 bg-primary flex items-center justify-center text-primary-foreground text-2xl font-bold">
                       HK
                     </div>
                   </div>
@@ -84,7 +84,7 @@ export default function AboutPage() {
               </h3>
               <div className="space-y-2">
                 <div>
-                  <div className="flex justify-between text-sm mb-1">
+                  <div className="flex justify-between small-text mb-1">
                     <span>HTML/CSS</span>
                     <span>95%</span>
                   </div>
@@ -96,7 +96,7 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div>
-                  <div className="flex justify-between text-sm mb-1">
+                  <div className="flex justify-between small-text mb-1">
                     <span>JavaScript/TypeScript</span>
                     <span>75%</span>
                   </div>
@@ -108,7 +108,7 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div>
-                  <div className="flex justify-between text-sm mb-1">
+                  <div className="flex justify-between small-text mb-1">
                     <span>React/Next.js</span>
                     <span>70%</span>
                   </div>
@@ -120,7 +120,7 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div>
-                  <div className="flex justify-between text-sm mb-1">
+                  <div className="flex justify-between small-text mb-1">
                     <span>Node.js</span>
                     <span>85%</span>
                   </div>
@@ -132,7 +132,7 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div>
-                  <div className="flex justify-between text-sm mb-1">
+                  <div className="flex justify-between small-text mb-1">
                     <span>Machine Learning</span>
                     <span>75%</span>
                   </div>
@@ -149,24 +149,22 @@ export default function AboutPage() {
 
           <div className="w-full md:col-span-2 order-2 md:order-1 space-y-6">
             <section>
-              <h2 className="text-2xl font-bold tracking-tight mb-4">
-                Hello, I'm Haneesh Kenny
-              </h2>
-              <p className="leading-7 mb-4">
+              <h2 className="mb-4">Hello, I'm Haneesh Kenny</h2>
+              <p className="mb-4">
                 Hi! I'm a passionate web developer and machine learning
                 enthusiast with a keen interest in building intelligent,
                 user-focused applications. I've worked on several projects
                 during my time in college and enjoy bringing ideas to life
                 through code.
               </p>
-              <p className="leading-7 mb-4">
+              <p className="mb-4">
                 I started programming in college, where I developed a strong
                 interest in building things for the web and exploring machine
                 learning. Since then, I've been learning
                 continuously-experimenting with AI, creating useful tools, and
                 working on projects that solve real-world problems.
               </p>
-              <p className="leading-7">
+              <p>
                 When I'm not coding, I enjoy long bike rides, zoning out to
                 music, and occasionally diving into a good read. I try to keep
                 things balanced and find inspiration from the world around me.
@@ -176,15 +174,13 @@ export default function AboutPage() {
             <Separator />
 
             <section>
-              <h2 className="text-2xl font-bold tracking-tight mb-4">
-                Education
-              </h2>
+              <h2 className="mb-4">Education</h2>
               <div>
                 <h3 className="font-semibold">Bachelor of Engineering</h3>
-                <p className="text-sm text-muted-foreground mb-2">
+                <p className="small-text muted-text mb-2">
                   Manipal University Jaipur • 2022 - 2026
                 </p>
-                <p className="text-muted-foreground">
+                <p className="muted-text">
                   Major in Data Science, Focused on Data Analysis, Software
                   Engineering, Artificial Intelligence, Machine Learning
                 </p>
@@ -194,9 +190,7 @@ export default function AboutPage() {
             <Separator />
 
             <section>
-              <h2 className="text-2xl font-bold tracking-tight mb-4">
-                Experience
-              </h2>
+              <h2 className="mb-4">Experience</h2>
               <div className="space-y-6">
                 <div>
                   <h3 className="font-semibold">
@@ -249,10 +243,8 @@ export default function AboutPage() {
         </div>
 
         <div className="bg-muted rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">
-            Interested in working together?
-          </h2>
-          <p className="text-muted-foreground mb-6 max-w-[42rem] mx-auto">
+          <h2 className="mb-4">Interested in working together?</h2>
+          <p className="muted-text mb-6 max-w-[42rem] mx-auto">
             I'm always open to discussing new projects, creative ideas, or
             opportunities to be part of your vision.
           </p>

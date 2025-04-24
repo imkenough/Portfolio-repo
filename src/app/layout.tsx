@@ -3,8 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster } from "sonner";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +34,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body
-        className="min-h-screen bg-background font-sans antialiased theme-transition"
+        className="min-h-screen bg-background text-foreground font-sans antialiased"
         suppressHydrationWarning
       >
         <ThemeProvider
@@ -45,7 +45,7 @@ export default function RootLayout({
         >
           <div className="relative flex min-h-screen flex-col">
             <Header />
-            <main className="flex-1 animate-fade-in">{children}</main>
+            <main className="flex-1">{children}</main>
             <Footer />
           </div>
           <Toaster />
