@@ -193,7 +193,7 @@ export default function AboutPage() {
               <h2 className="mb-4">Experience</h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-semibold">
+                  <p className="muted-text">
                     <i>
                       nill as of{" "}
                       {new Date().toLocaleDateString("en-US", {
@@ -202,7 +202,7 @@ export default function AboutPage() {
                         day: "numeric",
                       })}
                     </i>
-                  </h3>
+                  </p>
                 </div>
                 {/* <div>
                   <h3 className="font-semibold">Senior Full-Stack Developer</h3>
