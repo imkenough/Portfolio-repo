@@ -59,7 +59,7 @@ export default async function BlogPage() {
               </CardDescription>
             </CardHeader>
             <CardContent className="flex-grow">
-              <p className="text-muted-foreground">{post.excerpt}</p>
+              <p className="text-muted-foreground text-sm">{post.excerpt}</p>
               <div className="flex flex-wrap gap-2 mt-4">
                 {post.tags.map((tag) => (
                   <span
