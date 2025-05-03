@@ -19,8 +19,22 @@ import {
   RefreshCw,
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { getEnhancedRepositories, type Repository } from "@/lib/github";
 import { useEffect, useState } from "react";
+
+interface Repository {
+  id: number;
+  name: string;
+  description: string | null;
+  html_url: string;
+  homepage: string | null;
+  language: string | null;
+  stargazers_count: number;
+  forks_count: number;
+  watchers_count: number;
+  topics: string[];
+  created_at: string;
+  updated_at: string;
+}
 
 // Fallback projects in case GitHub API fails
 const fallbackProjects: Repository[] = [
@@ -99,9 +113,11 @@ export default function ProjectsPage() {
   const fetchProjects = async () => {
     setLoading(true);
     try {
-      const repos = await getEnhancedRepositories("imkenough", {
-        per_page: 10,
-      });
+      const response = await fetch("/api/github/repos");
+      if (!response.ok) {
+        throw new Error("Failed to fetch repositories");
+      }
+      const repos = await response.json();
       setProjects(repos.length > 0 ? repos : fallbackProjects);
     } catch (error) {
       console.error("Error fetching projects:", error);
