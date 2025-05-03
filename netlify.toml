@@ -2,7 +2,7 @@
   remote_images = ["https://github.com/*/*/", "https://avatars.githubusercontent.com/*"]
 
 [build]
-  command = "bun run build"
+  command = "npm run build"
   publish = ".next"
 
 [build.environment]

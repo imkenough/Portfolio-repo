@@ -1,13 +1,13 @@
-services:
-  - type: web
-    name: portfolio-blog
-    env: node
-    buildCommand: npm install && npm run build
-    startCommand: npm start
-    envVars:
-      - key: NODE_ENV
-        value: production
-      - key: NOTION_API_KEY
-        sync: false
-      - key: NOTION_DATABASE_ID
-        sync: false
+# services:
+#   - type: web
+#     name: portfolio-blog
+#     env: node
+#     buildCommand: npm install && npm run build
+#     startCommand: npm start
+#     envVars:
+#       - key: NODE_ENV
+#         value: production
+#       - key: NOTION_API_KEY
+#         sync: false
+#       - key: NOTION_DATABASE_ID
+#         sync: false

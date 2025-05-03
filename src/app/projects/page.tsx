@@ -1,3 +1,5 @@
+"use client";
+
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -9,9 +11,17 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Star, GitFork, Eye, ArrowUpRight, Github } from "lucide-react";
+import {
+  Star,
+  GitFork,
+  Eye,
+  ArrowUpRight,
+  Github,
+  RefreshCw,
+} from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getEnhancedRepositories, type Repository } from "@/lib/github";
+import { useEffect, useState } from "react";
 
 export const metadata: Metadata = {
   title: "imkenough | Projects",
@@ -88,10 +98,28 @@ function categorizeProjects(projects: Repository[]) {
   };
 }
 
-export default async function ProjectsPage() {
-  // Fetch real repositories from GitHub
-  const repos = await getEnhancedRepositories("imkenough", { per_page: 10 });
-  const projects = repos.length > 0 ? repos : fallbackProjects;
+export default function ProjectsPage() {
+  const [projects, setProjects] = useState<Repository[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  const fetchProjects = async () => {
+    setLoading(true);
+    try {
+      const repos = await getEnhancedRepositories("imkenough", {
+        per_page: 10,
+      });
+      setProjects(repos.length > 0 ? repos : fallbackProjects);
+    } catch (error) {
+      console.error("Error fetching projects:", error);
+      setProjects(fallbackProjects);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchProjects();
+  }, []);
 
   // Categorize projects
   const categorizedProjects = categorizeProjects(projects);
@@ -104,6 +132,17 @@ export default async function ProjectsPage() {
           A collection of my GitHub projects, open-source contributions, and
           other work.
         </p>
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={fetchProjects}
+          disabled={loading}
+        >
+          <RefreshCw
+            className={`mr-2 h-4 w-4 ${loading ? "animate-spin" : ""}`}
+          />
+          Refresh Projects
+        </Button>
       </div>
 
       <Tabs defaultValue="all" className="w-full mb-8">
