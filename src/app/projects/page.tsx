@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
@@ -22,11 +21,6 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getEnhancedRepositories, type Repository } from "@/lib/github";
 import { useEffect, useState } from "react";
-
-export const metadata: Metadata = {
-  title: "imkenough | Projects",
-  description: "Explore my GitHub projects and other work",
-};
 
 // Fallback projects in case GitHub API fails
 const fallbackProjects: Repository[] = [
