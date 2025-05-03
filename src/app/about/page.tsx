@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { RiBlueskyLine, RiGithubLine, RiMailAddLine } from "react-icons/ri";
 import { Separator } from "@/components/ui/separator";
+import { DynamicDate } from "@/components/dynamic-date";
 
 export const metadata: Metadata = {
   title: "imkenough | About",
@@ -195,12 +196,7 @@ export default function AboutPage() {
                 <div>
                   <p className="muted-text">
                     <i>
-                      nill as of{" "}
-                      {new Date().toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
+                      nill as of <DynamicDate />
                     </i>
                   </p>
                 </div>
