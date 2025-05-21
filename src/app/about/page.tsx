@@ -45,7 +45,7 @@ export default function AboutPage() {
                 <div className="flex justify-center space-x-4 mb-6">
                   <Button asChild size="icon" variant="ghost">
                     <Link
-                      href="https://github.com"
+                      href="https://github.com/imkenough"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
