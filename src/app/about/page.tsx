@@ -193,13 +193,22 @@ export default function AboutPage() {
             <section>
               <h2 className="mb-4">Experience</h2>
               <div className="space-y-6">
-                <div>
+                {/* <div>
                   <p className="muted-text">
                     <i>
-                      nill as of <DynamicDate />
+                      <DynamicDate />
                     </i>
                   </p>
-                </div>
+                </div> */}
+                <div>
+                <h3 className="font-semibold">Publicis Sapient</h3>
+                <p className="small-text muted-text mb-2">
+                  May 19, 2025 - <DynamicDate/>
+                </p>
+                <p className="muted-text">
+                  Engineering Intern, Summer internship 2025 program. Offline mode - Bengaluru campus
+                </p>
+              </div>
                 {/* <div>
                   <h3 className="font-semibold">Senior Full-Stack Developer</h3>
                   <p className="text-sm text-muted-foreground mb-2">
