@@ -203,7 +203,7 @@ export default function AboutPage() {
                 <div>
                 <h3 className="font-semibold">Publicis Sapient</h3>
                 <p className="small-text muted-text mb-2">
-                  May 19, 2025 - <DynamicDate/>
+                  May 19, 2025 - Present (<DynamicDate/>)
                 </p>
                 <p className="muted-text">
                   Engineering Intern, Summer internship 2025 program. Offline mode - Bengaluru campus
