@@ -11,7 +11,6 @@ import {
 } from "lucide-react";
 import { RiBlueskyLine, RiGithubLine, RiMailAddLine } from "react-icons/ri";
 import { Separator } from "@/components/ui/separator";
-import { DynamicDate } from "@/components/dynamic-date";
 
 export const metadata: Metadata = {
   title: "imkenough | About",
