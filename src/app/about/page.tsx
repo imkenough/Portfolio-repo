@@ -71,7 +71,7 @@ export default function AboutPage() {
                 </div>
 
                 <Button asChild className="w-full">
-                  <Link href="kenny_resume.pdf" download>
+                  <Link href="/my_resume_4.pdf" download>
                     <Download className="mr-2 h-4 w-4" /> Download Resume
                   </Link>
                 </Button>
