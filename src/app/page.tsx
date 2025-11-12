@@ -1,3 +1,4 @@
+import BlurText from "@/components/BlurText";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
@@ -65,9 +66,13 @@ export default async function Home() {
       <section className="py-8 sm:py-12 md:py-20 lg:py-28 bg-background border-b border-gray-300 dark:border-gray-800">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center text-center space-y-4 sm:space-y-6 md:space-y-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-4">
-              Hi, I'm <span className="text-primary">Haneesh Kenny</span>
-            </h1>
+            <BlurText
+              text="Hey im Haneesh Kenny!"
+              delay={100}
+              animateBy="words"
+              direction="top"
+              className="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-4 font-bold"
+            />
             <p className="muted-text max-w-[42rem] px-4 md:px-0 text-sm sm:text-base">
               I'm a college student aspiring to become a Full-Stack Developer,
               with a focus on building modern web applications and exploring
