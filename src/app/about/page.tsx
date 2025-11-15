@@ -71,7 +71,7 @@ export default function AboutPage() {
                 </div>
 
                 <Button asChild className="w-full">
-                  <Link href="/my_resume_4.pdf" download>
+                  <Link href="/resume-kenny.pdf" download>
                     <Download className="mr-2 h-4 w-4" /> Download Resume
                   </Link>
                 </Button>
@@ -200,14 +200,15 @@ export default function AboutPage() {
                   </p>
                 </div> */}
                 <div>
-                <h3 className="font-semibold">Publicis Sapient</h3>
-                <p className="small-text muted-text mb-2">
-                  May 19, 2025 - Aug 4, 2025
-                </p>
-                <p className="muted-text">
-                  Engineering Intern, Summer internship 2025 program. Offline mode - Bengaluru campus
-                </p>
-              </div>
+                  <h3 className="font-semibold">Publicis Sapient</h3>
+                  <p className="small-text muted-text mb-2">
+                    May 19, 2025 - Aug 4, 2025
+                  </p>
+                  <p className="muted-text">
+                    Engineering Intern, Summer internship 2025 program. Offline
+                    mode - Bengaluru campus
+                  </p>
+                </div>
                 {/* <div>
                   <h3 className="font-semibold">Senior Full-Stack Developer</h3>
                   <p className="text-sm text-muted-foreground mb-2">

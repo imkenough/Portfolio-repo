@@ -2,43 +2,49 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Loading() {
   return (
-    <div className="container py-12">
-      <div className="flex flex-col items-center space-y-4 text-center mb-12">
-        <Skeleton className="h-12 w-64 mb-4" />
-        <Skeleton className="h-6 w-96 mb-10" />
-      </div>
+    <div className="flex flex-col min-h-[calc(100vh-64px)] p-4 md:p-8">
+      {/* Hero Section Skeleton */}
+      <section className="py-8 sm:py-12 md:py-20 lg:py-28 bg-background border-b border-gray-300 dark:border-gray-800 flex flex-col items-center justify-center space-y-4">
+        <Skeleton className="h-10 w-3/4 max-w-md" />
+        <Skeleton className="h-6 w-1/2 max-w-sm" />
+        <div className="flex gap-4 mt-4">
+          <Skeleton className="h-10 w-32" />
+          <Skeleton className="h-10 w-32" />
+        </div>
+      </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <Card id="card-1" />
-        <Card id="card-2" />
-        <Card id="card-3" />
-        <Card id="card-4" />
-        <Card id="card-5" />
-        <Card id="card-6" />
-      </div>
-    </div>
-  );
-}
+      {/* Featured Projects Section Skeleton */}
+      <section className="py-8 sm:py-12 md:py-20 bg-background flex flex-col items-center justify-center space-y-4">
+        <Skeleton className="h-10 w-1/3 max-w-xs" />
+        <Skeleton className="h-6 w-2/3 max-w-md" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 w-full max-w-5xl mt-8">
+          <Skeleton className="h-64 w-full" />
+          <Skeleton className="h-64 w-full" />
+          <Skeleton className="h-64 w-full" />
+        </div>
+      </section>
 
-function Card({ id }: { id: string }) {
-  return (
-    <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div className="p-6 space-y-4">
-        <div className="space-y-2">
-          <Skeleton className="h-6 w-3/4" />
-          <Skeleton className="h-4 w-full" />
-          <Skeleton className="h-4 w-full" />
+      {/* Skills Section Skeleton */}
+      <section className="py-8 sm:py-12 md:py-20 bg-muted/50 flex flex-col items-center justify-center space-y-4">
+        <Skeleton className="h-10 w-1/3 max-w-xs" />
+        <Skeleton className="h-6 w-2/3 max-w-md" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 w-full max-w-5xl mt-8">
+          <Skeleton className="h-48 w-full" />
+          <Skeleton className="h-48 w-full" />
+          <Skeleton className="h-48 w-full" />
+          <Skeleton className="h-48 w-full" />
         </div>
-        <div className="flex flex-wrap gap-2">
-          <Skeleton className="h-6 w-16 rounded-full" />
-          <Skeleton className="h-6 w-24 rounded-full" />
-          <Skeleton className="h-6 w-20 rounded-full" />
+      </section>
+
+      {/* Call to Action Skeleton */}
+      <section className="py-20 bg-background flex flex-col items-center justify-center space-y-4">
+        <Skeleton className="h-10 w-1/2 max-w-sm" />
+        <Skeleton className="h-6 w-2/3 max-w-md" />
+        <div className="flex gap-4 mt-4">
+          <Skeleton className="h-10 w-40" />
+          <Skeleton className="h-10 w-40" />
         </div>
-        <div className="flex justify-between pt-4">
-          <Skeleton className="h-10 w-20 rounded-md" />
-          <Skeleton className="h-10 w-24 rounded-md" />
-        </div>
-      </div>
+      </section>
     </div>
   );
 }
